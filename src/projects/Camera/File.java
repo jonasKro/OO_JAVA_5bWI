@@ -5,7 +5,7 @@ public class File {
     private int fileSize;
     private long dateofOrigin;
 
-    public File(String filename, int fileSize, long dateofOrigin) {
+    public File(String fileName, int fileSize, long dateofOrigin) {
         this.fileName = fileName;
         this.fileSize = fileSize;
         this.dateofOrigin = dateofOrigin;
@@ -29,5 +29,9 @@ public class File {
 
     public void setDateofOrigin(long dateofOrigin) {
         this.dateofOrigin = dateofOrigin;
+    }
+
+    public String getFileName() {
+        return fileName;
     }
 }
