@@ -5,12 +5,17 @@ public class Camera {
     private int weight;
     private int resoltionInMegapixel;
     private SDCard sdCard;
+    private Manufacturer manufacturer;
+    private Lens lens;
 
-    public Camera(String color, int weight, int resoltionInMegapixel, SDCard sdCard) {
+    public Camera(String color, int weight, int resoltionInMegapixel, SDCard sdCard, Manufacturer manufacturer,
+            Lens lens) {
         this.color = color;
         this.weight = weight;
         this.resoltionInMegapixel = resoltionInMegapixel;
         this.sdCard = sdCard;
+        this.manufacturer = manufacturer;
+        this.lens = lens;
 
     }
 
@@ -40,6 +45,22 @@ public class Camera {
 
     public void takePicture(String name, int date, int size) {
         this.sdCard.saveImage(null);
+    }
+
+    public Manufacturer getManufacturer() {
+        return manufacturer;
+    }
+
+    public void setManufacturer(Manufacturer manufacturer) {
+        this.manufacturer = manufacturer;
+    }
+
+    public Lens getLens() {
+        return lens;
+    }
+
+    public void setLens(Lens lens) {
+        this.lens = lens;
     }
 
 }

@@ -1,6 +1,12 @@
 package projects.Camera;
 
 public class File {
+    enum size {
+        small,
+        medium,
+        large
+    }
+
     private String fileName;
     private int fileSize;
     private long dateofOrigin;
