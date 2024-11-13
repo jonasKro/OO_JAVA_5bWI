@@ -26,4 +26,20 @@ public class SDCard {
         this.files.add(file);
     }
 
+    public void removeImage(String fileName) {
+        for (int i = 0; i < files.size(); i++) {
+            if (files.get(i).getFileName() == fileName) {
+                files.remove(i);
+            }
+        }
+    }
+
+    public void getImage(String fileName) {
+        for (int i = 0; i < files.size(); i++) {
+            if (files.get(i).getFileName() == fileName) {
+                System.out.println(files.get(i).getFileName());
+            }
+        }
+    }
+
 }

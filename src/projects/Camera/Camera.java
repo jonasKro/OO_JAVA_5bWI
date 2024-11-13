@@ -1,5 +1,7 @@
 package projects.Camera;
 
+import projects.Camera.File.size;
+
 public class Camera {
     private String color;
     private int weight;
@@ -43,8 +45,9 @@ public class Camera {
         this.sdCard = sdCard;
     };
 
-    public void takePicture(String name, int date, int size) {
-        this.sdCard.saveImage(null);
+    public void takePicture(String name, int date, size size) {
+        File file = new File(name, size, date);
+        this.sdCard.saveImage(file);
     }
 
     public Manufacturer getManufacturer() {
@@ -63,4 +66,7 @@ public class Camera {
         this.lens = lens;
     }
 
+    public void deletePicture(String imageName) {
+        sdCard.removeImage(imageName);
+    }
 }

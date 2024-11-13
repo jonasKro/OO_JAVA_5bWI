@@ -1,17 +1,17 @@
 package projects.Camera;
 
 public class File {
-    enum size {
+    public enum size {
         small,
         medium,
         large
     }
 
     private String fileName;
-    private int fileSize;
+    private size fileSize;
     private long dateofOrigin;
 
-    public File(String fileName, int fileSize, long dateofOrigin) {
+    public File(String fileName, size fileSize, long dateofOrigin) {
         this.fileName = fileName;
         this.fileSize = fileSize;
         this.dateofOrigin = dateofOrigin;
@@ -21,11 +21,11 @@ public class File {
         this.fileName = fileName;
     }
 
-    public int getFileSize() {
+    public size getFileSize() {
         return fileSize;
     }
 
-    public void setFileSize(int fileSize) {
+    public void setFileSize(size fileSize) {
         this.fileSize = fileSize;
     }
 
